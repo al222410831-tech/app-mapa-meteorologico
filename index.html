@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa Meteorológico Integral</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Estilos del mapa Leaflet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+
+<body>
+    <header class="header">
+        <h1>🌍 Mapa Meteorológico Integral 🌍</h1>
+        <p>Consulta geográfica y meteorológica global</p>
+        <p class="author">
+            Práctica IAW | Desarrollado por: MARIO DANIEL JACINTO ARISTA 
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="search-container">
+            <h2>Buscar ubicación</h2>
+
+            <form id="search-form">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Ej. Lerma, Toluca, Madrid..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="search-btn">
+                    Consultar ubicación
+                </button>
+            </form>
+
+            <p id="status" role="status">
+                Escribe una ciudad para consultar sus datos.
+            </p>
+        </section>
+
+        <section id="weather-card" class="weather-card">
+            <h2>📍 Información meteorológica</h2>
+            <p>Los resultados aparecerán aquí.</p>
+        </section>
+
+        <section class="map-section">
+            <h2>🗺️ Mapa interactivo</h2>
+            <p>Explora la ubicación encontrada en el mapa.</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Datos geográficos: OpenStreetMap</p>
+        <p>Datos meteorológicos: Open-Meteo</p>
+        <p>Práctica académica de Ingeniería en Tecnologías de la Información</p>
+    </footer>
+
+    <!-- Biblioteca del mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Lógica de la aplicación -->
+    <script src="app.js"></script>
+</body>
+</html>
